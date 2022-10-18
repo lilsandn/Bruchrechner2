@@ -1,0 +1,66 @@
+
+<!-- saved from url=(0121)https://moodle.leo-statz-berufskolleg.de/pluginfile.php/360488/mod_resource/content/0/_division_bruchrechner_vorlage.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Bruchrechner (Division)</title>
+		
+		<script>
+			"use strict";
+			function fBruchrechner() {
+
+			var vZ1;
+			var vZ2;
+			var vN1;
+			var vN2;
+			var vZErgebnis;
+			var vNErgebnis;
+			var vAusgabeHtml;
+			vAusgabeHtml = vAusgabeHtml +  " / "
+		
+			vZ1= document.getElementById("idZ1").value;
+			vZ2= document.getElementById("idZ2").value;
+			vN1= document.getElementById("idN1").value;
+			vN2= document.getElementById("idN2").value;
+			 
+			var vZErgebnis;
+			vZErgebnis = vZ1 * vN2;
+			
+			var vNErgebnis; 
+			vNErgebnis = vZ2 * vN1;
+
+			var vAusgabeHtml;
+
+            vAusgabeHtml = "";
+		    vAusgabeHtml = vAusgabeHtml + " Das Ergrbnis aus:( "
+			vAusgabeHtml = vAusgabeHtml +  vZ1
+			vAusgabeHtml = vAusgabeHtml +  " / "
+			vAusgabeHtml = vAusgabeHtml +  vN1
+			vAusgabeHtml = vAusgabeHtml + " ):( "
+			vAusgabeHtml = vAusgabeHtml +  vZ2
+			vAusgabeHtml = vAusgabeHtml +  " / "
+			vAusgabeHtml = vAusgabeHtml +  vN2
+			vAusgabeHtml = vAusgabeHtml + " ) = "
+			vAusgabeHtml = vAusgabeHtml + vZErgebnis
+			vAusgabeHtml = vAusgabeHtml + " / " 
+			vAusgabeHtml = vAusgabeHtml + vNErgebnis
+				 
+					
+	
+			
+		
+			document.getElementById("idAusgabeHtml").innerHTML = vAusgabeHtml;	
+			}		
+		</script>
+	</head>	
+	<body><h1>Division-Bruchrechner</h1>
+		(<input id="idZ1" type="text" value="6">
+		/
+		<input id="idN1" type="text" value="5">)
+		:
+		(<input id="idZ2" type="text" value="3">
+		/
+		<input id="idN2" type="text" value="4">)
+		
+		<button onclick="fBruchrechner();"> Berechne!</button><br>
+		<br>
+		<div id="idAusgabeHtml">Hier kommt ein Ergebnis...</div>
+</body></html>
